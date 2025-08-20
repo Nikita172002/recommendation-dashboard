@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Shopify Orders Report</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <h2>Shopify Orders Report Generator</h2>
+
+    <div class="filters">
+      <label>Start Date:</label>
+      <input id="startDate" type="date" />
+      <label>End Date:</label>
+      <input id="endDate" type="date" />
+      <label>Tags (comma separated):</label>
+      <input id="tags" type="text" placeholder="VIP, Priority" />
+    </div>
+
+    <div class="form-section">
+      <h3>Single Shop</h3>
+      <input
+        id="shopUrl"
+        type="text"
+        placeholder="Shop URL (example: myshop.myshopify.com)"
+      />
+      <input id="accessToken" type="text" placeholder="Access Token" />
+      <button id="fetchSingle">Fetch Orders</button>
+    </div>
+
+    <div class="form-section">
+      <h3>Multiple Shops (Upload Excel)</h3>
+      <input id="fileUpload" type="file" accept=".xlsx" />
+      <button id="fetchMultiple">Fetch Orders</button>
+    </div>
+
+    <div id="status"></div>
+    <button id="downloadReport" disabled>Download Report</button>
+
+    <script src="dist/main.js"></script>
+  </body>
+</html>
